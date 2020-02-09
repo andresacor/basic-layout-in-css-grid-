@@ -1,0 +1,84 @@
+
+
+/* content */
+.main {
+    grid-area: main;
+    background: linear-gradient(190deg, #4d055c 0%, rgba(75, 4, 54, 0.8) 74%),url('../img/man-performing-on-stage-2102568.jpg');
+    background-size: cover;
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__cta {
+      position: relative;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media(min-width:768px) {
+      .main__cta {
+        text-align: left;
+      }
+    }
+  }
+  
+  @media(min-width:768px) {
+    .main {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 100px;
+    }
+  }
+  
+  
+  .main__cta--title {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-size: 3rem
+  }
+  
+  .main__cta--subtitle {
+  //  font-weight: lighter;
+   font-size: 2.7rem
+  }
+  
+  @media(min-width: 768px) {
+    .main__cta--title {
+      font-size: 4rem
+    }
+    .main__cta--subtitle {
+     font-size: 2.5rem
+    }
+  }
+  
+  
+  .btn {
+    position: relative;
+  }
+  
+  .btn__link {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    text-transform: initial;
+    display: inline-block;
+    margin: 0.5rem 0;
+    border: 1px solid #fff;
+    width: 12.5rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .btn__link:hover {
+    background-color: rgb(221, 177, 33);
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .date {
+    font-weight: inherit;
+  }
+  

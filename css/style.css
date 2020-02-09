@@ -1,0 +1,276 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:100,400&display=swap");
+/* Basic reset */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_reset\.scss}line{font-family:\000039}}
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_reset\.scss}line{font-family:\0000317}}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_wrapper\.scss}line{font-family:\000033}}
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-template-rows: auto 80%;
+  grid-template-areas: 'sidebar sidebar' 'main main' 'footer footer';
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_wrapper\.scss}line{font-family:\0000317}}
+  .wrapper {
+    grid-template-areas: 'sidebar main' 'sidebar main' 'sidebar footer';
+  }
+}
+/* MAIN MENU */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\000035}}
+.main-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\000035}}
+  .main-menu {
+    display: block;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000312}}
+.menu__item {
+  padding: 1rem;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000315}}
+.menu__item:hover > * {
+  color: #fff;
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000319}}
+.menu__item--link {
+  font-weight: lighter;
+  color: #ddb121;
+  text-align-last: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000326}}
+.show-menu {
+  display: block;
+  height: auto;
+  transition: all 1s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000332}}
+.hide-menu {
+  height: 0;
+}
+
+/* SIDEBAR */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000338}}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #2c1b28;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000341}}
+.sidebar__brand {
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000347}}
+.sidebar__brand--link {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  outline: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000358}}
+.sidebar__hamburguer {
+  float: right;
+  padding: 1rem;
+  color: #ddb121;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_menu\.scss}line{font-family:\0000358}}
+  .sidebar__hamburguer {
+    display: none;
+  }
+}
+
+/* content */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\000034}}
+.main {
+  grid-area: main;
+  background: linear-gradient(190deg, #4d055c 0%, rgba(75, 4, 54, 0.8) 74%), url("../img/man-performing-on-stage-2102568.jpg");
+  background-size: cover;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000314}}
+.main__cta {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000321}}
+  .main .main__cta {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000328}}
+  .main {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000336}}
+.main__cta--title {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 3rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000342}}
+.main__cta--subtitle {
+  font-size: 2.7rem;
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000348}}
+  .main__cta--title {
+    font-size: 4rem;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000351}}
+  .main__cta--subtitle {
+    font-size: 2.5rem;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000357}}
+.btn {
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000361}}
+.btn__link {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  text-transform: initial;
+  display: inline-block;
+  margin: 0.5rem 0;
+  border: 1px solid #fff;
+  width: 12.5rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000375}}
+.btn__link:hover {
+  background-color: #ddb121;
+  color: #000;
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_content\.scss}line{font-family:\0000381}}
+.date {
+  font-weight: inherit;
+}
+
+/* Footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\000034}}
+.footer {
+  grid-area: footer;
+  /* background-image: linear-gradient(315deg, #fabc3c 0%, #facc6b 75%); */
+  background-color: #ddb121;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000311}}
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: auto;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000320}}
+.notice {
+  position: relative;
+  color: #000;
+  flex-basis: 20%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000324}}
+.notice__information {
+  color: #420627;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000332}}
+.item {
+  position: relative;
+  text-align: left;
+  margin: 1rem 3rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000341}}
+  .item {
+    border-bottom: none;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000348}}
+.fa-clock,
+.fa-map,
+.fa-calendar-alt {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000358}}
+.information {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/andresaristizabal\/Documents\/Courses\/css-grid\/basic-layout-in\%20css-grid\%20copy\/scss\/_footer\.scss}line{font-family:\0000363}}
+  .information {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 60%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

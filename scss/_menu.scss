@@ -1,0 +1,68 @@
+
+
+/* MAIN MENU */
+
+.main-menu {
+    display: none;
+    @media(min-width: 768px) {
+        display: block;
+    }
+}
+
+.menu__item {
+    padding: 1rem;
+    color: #fff;
+    &:hover > * {
+      color: #fff;
+      text-decoration: underline; 
+    }
+    &--link {
+      font-weight: lighter;
+      color: rgb(221, 177, 33);
+      text-align-last: left;
+    }
+  }
+
+  .show-menu {
+      display: block;
+      height: auto;
+      transition: all 1s;
+  }
+
+  .hide-menu {
+    height: 0;
+  }
+  
+  
+  /* SIDEBAR */
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #2c1b28;
+    &__brand {
+      background-color: #fff;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--link {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        color: #000;
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+        outline: 0;
+      }
+      
+    }
+    &__hamburguer {
+        float: right;
+        padding: 1rem;
+        color: rgb(221, 177, 33);
+        @media(min-width: 768px) {
+            display: none;
+        }
+    }
+  }
+  
+  
